@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   block-stacked-prs:
-    runs-on: [self-hosted]
+    runs-on: [linux]
     steps:
       - name: Block Stacked PRs
         run: |
