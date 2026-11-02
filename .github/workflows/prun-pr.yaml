@@ -1,0 +1,15 @@
+name: 'Prune PR state dummy'
+
+on:
+  pull_request_target:
+    types: [closed, converted_to_draft]
+    branches: [ 'devcloud-stable']
+
+jobs:
+  block-stacked-prs:
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Echo pr closed 
+        run: |
+          echo "PR closed"
